@@ -1,7 +1,17 @@
-## sbt project cross-compiled with Scala 3 and Scala 2
 
-### Usage
-
-This is a normal sbt project, you can compile code with `sbt compile` and run it
-with `sbt run`, `sbt console` will start a Dotty REPL. For more information on
-cross-compilation in sbt, see <https://www.scala-sbt.org/1.x/docs/Cross-Build.html>.
+## Compilazione
+Per compilare eseguire:
+```
+sbt compile
+``` 
+dopodichè è possibile ottenere in file .jar come segue:
+```
+cd target/scala-2.12/classes/
+jar cvfe CoPurchaseAnalysis.jar CoPurchaseAnalysis CoPurchaseAnalysis*.class
+cd -
+```
+## Run in locale
+Per eseguire in locale è necessario esportare la variabile di ambiente `$SPARK_HOME` con il rispettivo path all'installazione di spark.
+```
+$SPARK_HOME/bin/spark-submit --class CoPurchaseAnalysis --master local[*] target/scala-2.12/classes/CoPurchaseAnalysis.jar src/dataset/test_dataset output
+```
