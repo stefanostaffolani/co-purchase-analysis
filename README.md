@@ -3,7 +3,7 @@
 This is the project of Scalable and Cloud Programming (81942) course of Unibo a.y. 2024/2025.
 
 The aim of the project was to develop a Scala/Spark application for computing the co-purchase analysis of products taken from CSV dataset.
-The dataset should be moved in `src/dataset/order_products.csv`.
+The dataset should be in `src/dataset/order_products.csv`.
 
 ## Prerequisites
 - Scala 2.12
@@ -44,16 +44,17 @@ gcloud init
 Then move to directory `scripts` and export the following environment variable with your config:
 ```bash
 export PROJECT_ID=""
-export BUCKET_NAME=""
-export REGION=""
-export NUM_WORKERS=""
+export BUCKET_NAME=""         # e.g. gs://my-bucket
+export REGION=""              # e.g. europe-west1
+export NUM_WORKERS=""         # e.g. 4
 ```
 The you can create a project with `id` PROJECT_ID with:
 ```bash
 gcloud projects create $PROJECT_ID
 gcloud config set project $PROJECT_ID
 ```
-If you encounter problems with billing check `[text](https://console.cloud.google.com/billing/projects)`
+If you encounter problems with billing check [this](https://console.cloud.google.com/billing/projects)
+
 Then you can create a Bucket in GCP Storage using:
 ```
 ./create-bucket.sh
