@@ -51,7 +51,9 @@ export NUM_WORKERS=""
 The you can create a project with `id` PROJECT_ID with:
 ```bash
 gcloud projects create $PROJECT_ID
+gcloud config set project $PROJECT_ID
 ```
+If you encounter problems with billing check `[text](https://console.cloud.google.com/billing/projects)`
 Then you can create a Bucket in GCP Storage using:
 ```
 ./create-bucket.sh
@@ -62,7 +64,7 @@ copy jar and dataset to Bucket with:
 ``` 
 create a cluster with:
 ```
-./create-cluster.sh --cluster-name NAME --num-workers NUM_WORKERS
+./create-cluster.sh --cluster-name NAME
 ```
 submit a job with:
 ```
