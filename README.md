@@ -41,7 +41,7 @@ For running on Google Cloud Dataproc you need first to authenticate with:
 ```bash
 gcloud init
 ```
-Then move to directory `scripts` and export the following environment variable:
+Then move to directory `scripts` and export the following environment variable with your config:
 ```bash
 export PROJECT_ID=""
 export BUCKET_NAME=""
