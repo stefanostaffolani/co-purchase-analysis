@@ -3,7 +3,7 @@
 This is the project of Scalable and Cloud Programming (81942) course of Unibo a.y. 2024/2025.
 
 The aim of the project was to develop a Scala/Spark application for computing the co-purchase analysis of products taken from CSV dataset.
-The dataset should be in `src/dataset/order_products.csv`.
+After cloning the repo you should copy the dataset in `src/dataset/order_products.csv`.
 
 ## Prerequisites
 - Scala 2.12
@@ -48,7 +48,7 @@ export BUCKET_NAME=""         # e.g. gs://my-bucket
 export REGION=""              # e.g. europe-west1
 export NUM_WORKERS=""         # e.g. 4
 ```
-The you can create a project with `id` PROJECT_ID with:
+Then you can create a project with `id` PROJECT_ID with:
 ```bash
 gcloud projects create $PROJECT_ID
 gcloud config set project $PROJECT_ID
