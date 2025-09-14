@@ -33,7 +33,7 @@ cd -
 For running the application in local it's necessary to export the `$SPARK_HOME` env variable with the respective path of Spark installation and the run the following command.
 
 ```
-$SPARK_HOME/bin/spark-submit --class CoPurchaseAnalysis --master local[*] target/scala-2.12/classes/CoPurchaseAnalysis.jar src/dataset/test_dataset output
+$SPARK_HOME/bin/spark-submit --class CoPurchaseAnalysis --master local[*] target/scala-2.12/classes/CoPurchaseAnalysis.jar src/dataset/test_dataset output 1
 
 ```
 ## Run on DataProc
@@ -63,7 +63,7 @@ copy jar and dataset to Bucket with:
 ```
 ./copy-artifacts-to-bucket.sh
 ``` 
-create a cluster with:
+choose a name for the cluster (NAME) and create it with:
 ```
 ./create-cluster.sh --cluster-name NAME
 ```
