@@ -41,7 +41,7 @@ fi
 
 if [ "$NUM_WORKERS" -eq 1 ]; then
     echo "single node"
-    gcloud dataproc clusters create ${CLUSTER_NAME} --region ${REGION} --single-node --master-boot-disk-size ${MASTER_BOOT_DISK_SIZE} --worker-boot-disk-size ${WORKER_BOOT_DISK_SIZE} --master-machine-type ${MACHINE_TYPE} --image-version ${IMAGE_VERSION}
+    gcloud dataproc clusters create ${CLUSTER_NAME} --region ${REGION} --single-node --master-boot-disk-size ${MASTER_BOOT_DISK_SIZE} --worker-boot-disk-size ${WORKER_BOOT_DISK_SIZE} --master-machine-type ${MACHINE_TYPE} --worker-machine-type ${MACHINE_TYPE} --image-version ${IMAGE_VERSION}
 else
-    gcloud dataproc clusters create ${CLUSTER_NAME} --region ${REGION} --num-workers ${NUM_WORKERS} --master-boot-disk-size ${MASTER_BOOT_DISK_SIZE} --worker-boot-disk-size ${WORKER_BOOT_DISK_SIZE} --master-machine-type ${MACHINE_TYPE} --image-version ${IMAGE_VERSION}
+    gcloud dataproc clusters create ${CLUSTER_NAME} --region ${REGION} --num-workers ${NUM_WORKERS} --master-boot-disk-size ${MASTER_BOOT_DISK_SIZE} --worker-boot-disk-size ${WORKER_BOOT_DISK_SIZE} --master-machine-type ${MACHINE_TYPE} --worker-machine-type ${MACHINE_TYPE} --image-version ${IMAGE_VERSION}
 fi
